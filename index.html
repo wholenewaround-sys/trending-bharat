@@ -3,48 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trending Bharat</title>
-  <meta name="description" content="Get the latest trending news, viral topics, and hot stories from India in one place.">
+  <title>Trending Bharat - Latest Trending News</title>
+  <meta name="description" content="Trending Bharat brings you the latest trending news, viral stories, Bollywood buzz, tech updates, and hot topics from India.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-gray-100 text-gray-900">
+
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
       <h1 class="text-2xl font-bold text-red-600">Trending Bharat</h1>
-      <nav class="space-x-6">
+      <nav class="space-x-4 text-sm font-medium">
         <a href="index.html" class="hover:text-red-600">Home</a>
+        <a href="#" class="hover:text-red-600">News</a>
+        <a href="#" class="hover:text-red-600">Viral</a>
+        <a href="#" class="hover:text-red-600">Bollywood</a>
+        <a href="#" class="hover:text-red-600">Tech</a>
+        <a href="#" class="hover:text-red-600">Sports</a>
         <a href="about.html" class="hover:text-red-600">About</a>
-        <a href="privacy.html" class="hover:text-red-600">Privacy Policy</a>
+        <a href="privacy.html" class="hover:text-red-600">Privacy</a>
         <a href="contact.html" class="hover:text-red-600">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="bg-red-600 text-white py-12 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-2">India's Latest Trending News</h2>
-    <p class="text-lg">Stay updated with what's hot right now.</p>
+  <!-- Hero Banner -->
+  <section class="bg-red-600 text-white py-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-2">India’s Latest Trending Topics</h2>
+    <p class="text-lg">Breaking news, viral stories, Bollywood, tech & more.</p>
   </section>
 
-  <!-- Blog Section -->
-  <main class="max-w-6xl mx-auto py-10 px-6 grid md:grid-cols-3 gap-8">
-    <!-- Sample Post -->
-    <article class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden">
-      <img src="https://source.unsplash.com/600x400/?india,news" alt="Trending news" class="w-full h-48 object-cover">
-      <div class="p-4">
-        <h3 class="text-xl font-semibold mb-2">Sample Trending Article</h3>
-        <p class="text-gray-600 mb-3">This is where your latest trending topic article will appear. SEO-friendly and ready for AdSense.</p>
-        <a href="#" class="text-red-600 font-medium">Read More →</a>
+  <!-- Main Content -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-10 px-6">
+    
+    <!-- Articles Section -->
+    <main class="md:col-span-2 space-y-6">
+      
+      <!-- Article Card -->
+      <article class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden">
+        <img src="https://source.unsplash.com/800x400/?india,news" alt="Trending news" class="w-full h-56 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-2">Sample Trending Article Title</h3>
+          <p class="text-gray-600 mb-3">This is a short preview of your article. Replace it with real trending content.</p>
+          <a href="post.html" class="text-red-600 font-medium">Read More →</a>
+        </div>
+      </article>
+
+      <!-- Another Article -->
+      <article class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden">
+        <img src="https://source.unsplash.com/800x400/?india,viral" alt="Viral news" class="w-full h-56 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-2">Another Hot Topic Title</h3>
+          <p class="text-gray-600 mb-3">Quick preview of another article. Add fresh viral or breaking content here.</p>
+          <a href="post.html" class="text-red-600 font-medium">Read More →</a>
+        </div>
+      </article>
+
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="space-y-6">
+      <div class="bg-white p-4 rounded-xl shadow">
+        <h4 class="text-lg font-semibold mb-3">Latest Posts</h4>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li><a href="post.html" class="hover:text-red-600">Post 1 Title</a></li>
+          <li><a href="post.html" class="hover:text-red-600">Post 2 Title</a></li>
+          <li><a href="post.html" class="hover:text-red-600">Post 3 Title</a></li>
+        </ul>
       </div>
-    </article>
-  </main>
+
+      <div class="bg-white p-4 rounded-xl shadow">
+        <h4 class="text-lg font-semibold mb-3">Advertisement</h4>
+        <p class="text-gray-500 text-sm">Ad space (for Google AdSense).</p>
+      </div>
+    </aside>
+  </div>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-300 py-6 mt-10">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <p>&copy; 2025 Trending Bharat. All rights reserved.</p>
-    </div>
+  <footer class="bg-gray-800 text-gray-300 py-6 mt-10 text-center">
+    <p>&copy; 2025 Trending Bharat. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
