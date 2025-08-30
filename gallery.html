@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bollywood, News & Viral Images</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .image-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .image-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    .category-tab {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .category-tab.active {
+      background-color: #3b82f6;
+      color: white;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <div class="container mx-auto px-4 py-8">
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">Bollywood, News & Viral Images</h1>
+      <p class="text-gray-600 max-w-2xl mx-auto">Click on any image to view it in full size. These are free Unsplash stock images.</p>
+    </header>
+
+    <!-- Category Tabs -->
+    <div class="flex justify-center mb-8">
+      <div class="flex space-x-2 bg-white rounded-lg shadow-sm p-1">
+        <div class="category-tab active py-2 px-6 rounded-lg" data-category="all">All Images</div>
+        <div class="category-tab py-2 px-6 rounded-lg" data-category="bollywood">Bollywood</div>
+        <div class="category-tab py-2 px-6 rounded-lg" data-category="news">News</div>
+        <div class="category-tab py-2 px-6 rounded-lg" data-category="viral">Viral</div>
+      </div>
+    </div>
+
+    <!-- Image Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+      <!-- Bollywood -->
+      <div class="image-card bollywood bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1611162617211-7a707a31f5c0" alt="Bollywood Star" class="w-full h-full object-cover">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Bollywood Celebrity</h3>
+          <p class="text-gray-600">Latest movie star appearance</p>
+          <div class="mt-3 flex items-center text-sm text-gray-500">
+            <i class="far fa-clock mr-1"></i> 2 hours ago
+          </div>
+        </div>
+      </div>
+
+      <div class="image-card bollywood bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1603190287605-0a2f8b57a4f2" alt="Bollywood Song" class="w-full h-full object-cover">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Movie Song Release</h3>
+          <p class="text-gray-600">New hit song from upcoming film</p>
+          <div class="mt-3 flex items-center text-sm text-gray-500">
+            <i class="far fa-clock mr-1"></i> 1 day ago
+          </div>
+        </div>
+      </div>
+
+      <div class="image-card bollywood bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439" alt="Award Show" class="w-full h-full object-cover">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Award Function</h3>
+          <p class="text-gray-600">Stars at annual film awards</p>
+          <div class="mt-3 flex items-center text-sm text-gray-500">
+            <i class="far fa-clock mr-1"></i> 3 days ago
+          </div>
+        </div>
+      </div>
+
+      <!-- News -->
+      <div class="image-card news bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1581092919539-1c89c7d4d0c4" alt="Breaking News" class="w-full h-full object-cover">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Breaking News</h3>
+          <p class="text-gray-600">Important national development</p>
+          <div class="mt-3 flex items-center text-sm text-gray-500">
+            <i class="far fa-clock mr-1"></i> 5 hours ago
+          </div>
+        </div>
+      </div>
+
+      <div class="image-card news bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551446591-142875a901a1" alt="International News" class="w-full h-full object-cover">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">International News</h3>
+          <p class="text-gray-600">Global events coverage</p>
+          <div class="mt-3 flex items-center text-sm text-gray-500">
+            <i class="far fa-clock mr-1"></i> 1 day ago
+          </div>
+        </div>
+      </div>
+
+      <div class="image-card news bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf" alt="Business News" class="w-full h-full object-cover">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Business News</h3>
+          <p class="text-gray-600">Market updates and trends</p>
+          <div class="mt-3 flex items-center text-sm text-gray-500">
+            <i class="far fa-clock mr-1"></i> 2 days ago
+          </div>
+        </div>
+      </div>
+
+      <!-- Viral -->
+      <div class="image-card viral bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Viral Meme" class="w-full h-full object-cover">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Viral Meme</h3>
+          <p class="text-gray-600">Internet sensation of the week</p>
+          <div class="mt-3 flex items-center text-sm text-gray-500">
+            <i class="far fa-clock mr-1"></i> 6 hours ago
+          </div>
+        </div>
+      </div>
+
+      <div class="image-card viral bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1592201426153-9e80f9f60e5b" alt="Social Media Trend" class="w-full h-full object-cover">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Social Media Trend</h3>
+          <p class="text-gray-600">Latest challenge taking over feeds</p>
+          <div class="mt-3 flex items-center text-sm text-gray-500">
+            <i class="far fa-clock mr-1"></i> 1 day ago
+          </div>
+        </div>
+      </div>
+
+      <div class="image-card viral bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1581090700227-4c4b8e8f3a98" alt="Viral Video" class="w-full h-full object-cover">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Viral Video</h3>
+          <p class="text-gray-600">Top trending video content</p>
+          <div class="mt-3 flex items-center text-sm text-gray-500">
+            <i class="far fa-clock mr-1"></i> 2 days ago
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-600 mt-12">
+      <p>© 2025 Your Website Name. Images sourced from Unsplash (free to use).</p>
+    </footer>
+  </div>
+
+  <script>
+    // Category filtering
+    document.querySelectorAll('.category-tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        const category = this.getAttribute('data-category');
+        document.querySelectorAll('.image-card').forEach(card => {
+          card.style.display = (category === 'all' || card.classList.contains(category)) ? 'block' : 'none';
+        });
+      });
+    });
+
+    // Modal preview
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeModal = document.getElementsByClassName("close")[0];
+
+    document.querySelectorAll('.image-card img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function() {
+        modal.style.display = "flex";
+        modalImg.src = this.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => modal.style.display = "none");
+    window.addEventListener('click', e => { if (e.target == modal) modal.style.display = "none"; });
+  </script>
+</body>
+  </html>
